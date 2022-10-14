@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class FileExample {
@@ -44,6 +45,7 @@ public class FileExample {
 	  result.add(start);
 	  if(f.isDirectory()) {
       File[] paths = f.listFiles();
+      Arrays.sort(paths);
       for(File subFile: paths) {
         result.add(subFile);
       }
