@@ -38,11 +38,11 @@ class LinkedList {
             return;
         }
         // Otherwise, loop until the end and add at the end with a null
-        //BUG: n.next = new Node(value, null); should be outside the while loop 
         while(n.next != null) {
             n = n.next;
+            n.next = new Node(value, null);
         }
-        n.next = new Node(value, null);
+       
         
     }
 
